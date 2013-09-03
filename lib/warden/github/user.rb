@@ -75,7 +75,7 @@ module Warden
         # Don't cache instance for now because of a ruby marshaling bug present
         # in MRI 1.9.3 (Bug #7627) that causes instance variables to be
         # marshaled even when explicitly specifying #marshal_dump.
-        Octokit::Client.new(:access_token => token)
+        Octokit::Client.new(:login => login, :access_token => token)
       end
 
       private
